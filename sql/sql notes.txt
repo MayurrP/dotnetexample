@@ -1,0 +1,59 @@
+------------------Day 2-----------------------
+
+Aliase Columns will only work in Order by Condition.
+
+
+Recommendation ----> Negative conditions should be avoided in SQL Server (!= or <> (same), NOT IN)
+
+Because Algorithm internally which MS SQL Server uses are not good 
+
+
+---------------------------------
+Corelated SubQuery -- Rare Cases
+---------------------------------
+
+
+---------- Day 3-------------
+ntile(2) ------> divide whole record into 2 categories
+ntile(n) ------> divide whole record into n categories
+
+
+----------Day4--------------
+
+coalesce fun return 1st not null value.
+It is similar to isNull, but isnull fun i valid for 2 columns only, but coalesce is valid for two or 
+more than two column
+
+
+Merge --> combination of update and insert
+	In merge comma
+
+OBJECT_ID ---> 
+
+
+If we want to access the table of another database
+then 
+	DBName.SchemaName.TableName
+
+
+Stored Procedure
+
+If we did not pass the value then it retun 0
+
+--------------------DAY5----------
+
+Go used to separte batches
+
+You should write exec to run the stored procedure
+if it isn't the first statement of the batch
+
+
+
+Table Scan -----> Heap Scan
+
+--------------------DAY6----------
+
+Cross Apply and Outer Apply
+
+Cross Apply ---> use as inner join
+Outer Apply ---> use as left outer join

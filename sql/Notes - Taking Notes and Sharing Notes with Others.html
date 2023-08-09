@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://notes.io/qJz8P -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Notes - Taking Notes and Sharing Notes with Others </title>
+<meta name="description" content="Notes is a web-based application that allows users to take and share notes with others.Notes.io is designed to be simple and easy to use, making it a great choice for anyone who wants a convenient way to take and share notes.  ">
+<meta name="keywords" content="notes,note,online note,notes app,notes io,online note service,past note,short note,note shortener">
+<meta name="viewport" content="width=device-width, initial-scale=0.7">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="canonical" href="https://notes.io/qJz8P">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@notesio">
+<meta name="twitter:creator" content="notes.io">
+<meta name="twitter:title" content="Notes - online note taking app - notes.io">
+<meta name="twitter:description" content=" - Taking Notes and Sharing Notes with Others">
+<meta name="twitter:image" content="https://notes.io/theme/images/twitterCard.png">
+<meta property="og:site_name" content="https://notes.io">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Notes - Online Services ">
+<meta property="og:url" content="https://notes.io/qJz8P">
+<meta property="og:image" content="https://notes.io/theme/images/appLogo.png">
+<meta property="og:description" content=" - Taking Notes and Sharing Notes with Others">
+<meta name="”robots”" content="index, follow">
+<meta name="googlebot" content="All, Index, Follow">
+<link rel="image_src" type="image/jpeg" href="./Notes - Taking Notes and Sharing Notes with Others_files/logo.png">
+<meta name="format-detection" content="telephone=no">
+<meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+<link rel="icon" href="https://notes.io/favicon.ico" type="image/x-icon">
+
+<link href="./Notes - Taking Notes and Sharing Notes with Others_files/notes.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" async="" src="./Notes - Taking Notes and Sharing Notes with Others_files/ga.js.download"></script><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+<div class="mainDiv">
+<h1 class="whatIsNotesIO" style=""><span>Notes</span><img src="./Notes - Taking Notes and Sharing Notes with Others_files/whatisnotesio.png" alt="What is notes.io? " title="what is notes.io?" height="20" width="123"></h1>
+<div class="programArea" style="width: 100%;">
+<table width="100%" class="grayBar">
+<tbody><tr>
+<td class="barsol"></td>
+<td class="barback">
+<a href="https://notes.io/" title="Notes">
+<img src="./Notes - Taking Notes and Sharing Notes with Others_files/logo.png" class="logo" title="notes" alt="Notes  Logo" height="45" width="190">
+</a>
+<div class="slogan" style="">
+<img src="./Notes - Taking Notes and Sharing Notes with Others_files/fastEasyShort.png" title="Fast, easy and short" alt="Notes brand slogan" height="20">
+<h2>
+Notes - notes.io
+</h2>
+</div>
+<div class="menu">
+<a href="https://notes.io/qp8FN" class="random">Popular notes</a>
+<input id="btnShare" type="button" class="share" value="qJz8P"><a href="https://notes.io/qJz8P" class="comingsoon" title="Coming soon"></a>
+<input id="btnAccount" type="button" class="account" value="Account">
+<input id="" type="button" class="myNotesDisable" value="Account"></div>
+</td>
+<td class="barsag"></td>
+</tr>
+</tbody></table>
+<div class="notesArea">
+<div id="notesTextAreaID" class="notesTextArea" style="min-height: 494.812px;">
+<center>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4070502493653474" data-ad-slot="3868234696"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></center>using System;<br>
+using System.Collections.Generic;<br>
+<br>
+class Student<br>
+{<br>
+public string Name { get; set; }<br>
+public List&lt;int&gt; Grades { get; set; }<br>
+<br>
+public Student(string name)<br>
+{<br>
+Name = name;<br>
+Grades = new List&lt;int&gt;();<br>
+}<br>
+}<br>
+<br>
+class Program<br>
+{<br>
+static List&lt;Student&gt; students = new List&lt;Student&gt;();<br>
+<br>
+static void Main()<br>
+{<br>
+bool exit = false;<br>
+<br>
+while (!exit)<br>
+{<br>
+Console.WriteLine("1. Add a student");<br>
+Console.WriteLine("2. Add a grade");<br>
+Console.WriteLine("3. View grades");<br>
+Console.WriteLine("4. Exit");<br>
+Console.WriteLine("Enter your choice:");<br>
+<br>
+string choice = Console.ReadLine();<br>
+<br>
+switch (choice)<br>
+{<br>
+case "1":<br>
+AddStudent();<br>
+break;<br>
+case "2":<br>
+AddGrade();<br>
+break;<br>
+case "3":<br>
+ViewGrades();<br>
+break;<br>
+case "4":<br>
+exit = true;<br>
+break;<br>
+default:<br>
+Console.WriteLine("Invalid choice. Please try again.");<br>
+break;<br>
+}<br>
+}<br>
+}<br>
+<br>
+static void AddStudent()<br>
+{<br>
+Console.WriteLine("Enter student name:");<br>
+string name = Console.ReadLine();<br>
+<br>
+students.Add(new Student(name));<br>
+<br>
+Console.WriteLine("Student added successfully.");<br>
+}<br>
+<br>
+static void AddGrade()<br>
+{<br>
+Console.WriteLine("Enter student name:");<br>
+string name = Console.ReadLine();<br>
+<br>
+Student student = FindStudent(name);<br>
+<br>
+if (student != null)<br>
+{<br>
+Console.WriteLine("Enter grade:");<br>
+int grade;<br>
+<br>
+if (int.TryParse(Console.ReadLine(), out grade))<br>
+{<br>
+student.Grades.Add(grade);<br>
+Console.WriteLine("Grade added successfully.");<br>
+}<br>
+else<br>
+{<br>
+Console.WriteLine("Invalid grade. Please enter a numeric value.");<br>
+}<br>
+}<br>
+else<br>
+{<br>
+Console.WriteLine("Student not found.");<br>
+}<br>
+}<br>
+<br>
+static void ViewGrades()<br>
+{<br>
+Console.WriteLine("Enter student name:");<br>
+string name = Console.ReadLine();<br>
+<br>
+Student student = FindStudent(name);<br>
+<br>
+if (student != null)<br>
+{<br>
+Console.WriteLine("Grades:");<br>
+<br>
+foreach (int grade in student.Grades)<br>
+{<br>
+Console.WriteLine(grade);<br>
+}<br>
+}<br>
+else<br>
+{<br>
+Console.WriteLine("Student not found.");<br>
+}<br>
+}<br>
+<br>
+static Student FindStudent(string name)<br>
+{<br>
+return students.Find(s =&gt; s.Name == name);<br>
+}<br>
+}<br>
+<center>
+
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4070502493653474"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center> </div>
+</div>
+<table width="100%">
+<tbody><tr>
+<td class="notespagebottom1">&nbsp;</td>
+<td class="notespagebottom2">&nbsp;</td>
+<td class="notespagebottom3">&nbsp;</td>
+</tr>
+</tbody></table>
+</div>
+<div class="adverArea" style="width: 4%;">
+<div class="close"></div>
+<table class="width100">
+<tbody><tr>
+<td class="barsol">&nbsp;</td>
+<td class="barback">
+<div class="myNotesArea"> <img src="./Notes - Taking Notes and Sharing Notes with Others_files/whatisnotesio.png" alt="what is notes.io" class="adverWhatsNotes"></div></td>
+<td class="barsag">&nbsp;</td>
+</tr>
+</tbody></table>
+<div class="notesArea">
+<div class="notesTextArea">
+<div class="scrollArea" style="min-height: 494.812px;">
+<p style="padding-bottom: 10px;"> Notes.io is a web-based application for taking notes. You can take your notes and share with others people. If you like taking long notes, notes.io is designed for you. To date, over 8,000,000,000 notes created and continuing... </p>
+<div style="padding-bottom: 10px;">
+<p> With notes.io; </p>
+<ul style="padding-left: 10px;">
+<li> * You can take a note from anywhere and any device with internet connection.</li>
+<li> * You can share the notes in social platforms (YouTube, Facebook, Twitter, instagram etc.).</li>
+<li> * You can quickly share your contents without website, blog and e-mail.</li>
+<li> * You don't need to create any Account to share a note. As you wish you can use quick, easy and best shortened notes with sms, websites, e-mail, or messaging services (WhatsApp, iMessage, Telegram, Signal).</li>
+<li> * Notes.io has fabulous infrastructure design for a short link and allows you to share the note as an easy and understandable link.</li>
+</ul>
+</div>
+<p style="padding-bottom: 10px;"> <b style="font-weight: bolder;">Fast:</b> Notes.io is built for speed and performance. You can take a notes quickly and browse your archive. </p>
+<p style="padding-bottom: 10px;"> <b style="font-weight: bolder;">Easy:</b> Notes.io doesn’t require installation. Just write and share note! </p>
+<p style="padding-bottom: 10px;"> <b style="font-weight: bolder;">Short:</b> Notes.io’s url just 8 character. You’ll get shorten link of your note when you want to share. (Ex: <a href="https://notes.io/q" style="font-size: 15px"> notes.io/q </a>) </p>
+<p style="padding-bottom: 10px;"> <b style="font-weight: bolder;">Free:</b> Notes.io works for 12 years and has been free since the day it was started. </p>
+<br>
+<p> You immediately create your first note and start sharing with the ones you wish. If you want to contact us, you can use the following communication channels;</p>
+<br>
+<p><b>Email: hello@notes.io</b></p>
+<p><b>Twitter: http://twitter.com/notesio</b></p>
+<p><b>Instagram: http://instagram.com/notes.io</b></p>
+<p><b>Facebook: http://facebook.com/notesio</b></p>
+<br> <br>
+<p>
+Regards;<br>
+Notes.io Team
+</p>
+</div>
+</div>
+</div>
+<table class="width100">
+<tbody><tr>
+<td class="notespagebottom1">&nbsp;</td>
+<td class="notespagebottom2">&nbsp;</td>
+<td class="notespagebottom3">&nbsp;</td>
+</tr>
+</tbody></table>
+</div> </div>
+<div id="messageback" class="messageback"></div>
+<div class="messageBOXback"></div>
+<div id="msgBOXshort" class="message" style="">
+<table class="width100">
+<tbody><tr>
+<td class="auto-style1">&nbsp;</td>
+<td class="auto-style2">
+<div class="closeBTNpopup" id="shortClose"></div>
+<h6 id="shortNoteH1">Shortened Note Link</h6>
+</td>
+<td class="auto-style3">&nbsp;</td>
+</tr>
+<tr>
+<td class="auto-style4">&nbsp;</td>
+<td class="auto-style9">
+<div id="sonuc">
+<span><img src="./Notes - Taking Notes and Sharing Notes with Others_files/ajax-loader.gif" class="looding" alt="Looding Image"></span>
+</div>
+</td>
+<td class="auto-style5">&nbsp;</td>
+</tr>
+<tr>
+<td class="auto-style6">&nbsp;</td>
+<td class="auto-style7">&nbsp;</td>
+<td class="auto-style8">&nbsp;</td>
+</tr>
+</tbody></table>
+</div><div id="messageBOX" class="message">
+<table class="width100">
+<tbody><tr>
+<td class="auto-style1">&nbsp;</td>
+<td class="auto-style2">
+<div class="closeBTNpopup" id="shortClose"></div>
+<h6>Long File</h6>
+</td>
+<td class="auto-style3">&nbsp;</td>
+</tr>
+<tr>
+<td class="auto-style4">&nbsp;</td>
+<td class="auto-style9">
+<p>For written notes was greater than 18KB Unable to shorten.</p>
+<p>To be smaller than 18KB, please organize your notes, or sign in.</p>
+</td>
+<td class="auto-style5">&nbsp;</td>
+</tr>
+<tr>
+<td class="auto-style6">&nbsp;</td>
+<td class="auto-style7">&nbsp;</td>
+<td class="auto-style8">&nbsp;</td>
+</tr>
+</tbody></table>
+</div><script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18039671-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+<div class="footer">
+<h3>Notes</h3>
+<p><a href="https://notes.io/aG4K" title="Feeling Luck">I'm Feeling Lucky</a></p>
+<p style="margin:10px;">If you like notes.io, please support us via <a href="https://notes.io/a" title="Notes.io Donation Page"> Cryptocurrency(Ether,Doge,Monero) </a> </p>
+
+
+<p>
+<a href="https://directmessage.xyz/" target="_blank" title="Direct Message for WhatsApp iOS App Web site">
+<picture>
+<source srcset="/theme/banners/directMessageBanner.webp, /theme/banners/directMessageBanner@2x.webp 2x" type="image/webp">
+<source srcset="/theme/banners/directMessageBanner.webp, /theme/banners/directMessageBanner.webp 1x" type="image/webp">
+<img src="./Notes - Taking Notes and Sharing Notes with Others_files/directMessageBanner.jpg" alt="Direct Message for Whatsapp" width="970" height="250" class="directMessageBanner" title="Direct Message for WhatsApp">
+</picture>
+</a>
+</p>
+<p>
+<a href="https://quickreplies.app/" target="_blank" title="Quick Replies iOS App Web Site"> Paste Keyboard iOS - Quick Replies </a></p>
+<p style="text-align: right;width: 98%">v 2.7.3</p>
+<div class="socialArea">
+<p>We'd love to hear from you. Please email us at <a href="mailto:hello@notes.io">hello@notes.io</a></p>
+<p>
+Copyright 2022
+<a href="https://www.metromedya.com/tr/" target="_blank" title="ios programlama ve tasarım ajansı">Metromedya</a>
+</p>
+</div>
+<div style="padding: 20px;font-size: 11px">
+<a href="https://www.metromedya.com/tr/hizmetlerimiz/ios-uygulama-gelistirme.html" target="_blank" title="ios uygulama geliştirme şirketi">ios uygulama geliştirme </a>
+</div>
+
+<script src="./Notes - Taking Notes and Sharing Notes with Others_files/jquery.min.js.download"></script>
+<script src="./Notes - Taking Notes and Sharing Notes with Others_files/notes.min.js.download"></script>
+</div>
+<script defer="" src="./Notes - Taking Notes and Sharing Notes with Others_files/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon="{&quot;rayId&quot;:&quot;7e58edfc6e8c46a9&quot;,&quot;version&quot;:&quot;2023.4.0&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;ca8549779d274e4a85c7f21e58b590f4&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
+
+</body></html>

@@ -1,0 +1,283 @@
+Built-In functions are used in SQL SELECT expressions to calculate values and manipulate data.	
+
+Built-in Function Categories into 
+
+1. Aggregate Function
+2. Mathematical Function
+3. String
+4. DateTime 
+
+
+1. Aggregate Function
+---------------------------
+Aggregate functions perform a calculation on a set of values and return a single value. 
+They're allowed in the select list or the HAVING clause of a SELECT statement.
+
+AVG  -->  Find average value of group
+MIN  -->  Find minimum value of group
+MAX  -->  Find maximum value of group
+SUM  -->  Find total value of group
+COUNT  -->  Find count value for group
+COUNT(*)  -->  It will Count all value including null
+
+
+
+2. Mathematical Function
+--------------------------------------
+The following scalar functions perform a calculation, usually based on 
+input values that are provided as arguments, and return a numeric value:
+
+ABS()  -->  ABS changes negative values to positive values. ABS has no effect on zero or positive values.
+
+Syntax :
+ABS ( numeric_expression )
+
+Example : 
+
+SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
+
+Result : 
+
+---- ---- ----  
+1.0  .0   1.0
+
+
+CEILING()  -->  Remove Fraction Portion & give you the next number
+
+Syntax :
+CEILING( numeric_expression )
+
+Example : 
+
+SELECT CEILING(123.45), CEILING(-123.45), CEILING(0.0);  
+
+Result : 
+
+--------- --------- -------------------------   
+124.00    -123.00    0.00                       
+  
+
+
+
+ROUND() --> Returns a numeric value, rounded to the specified length or precision.
+
+Syntax :
+ROUND ( numeric_expression , length [ ,function ] )
+
+Example : 
+
+SELECT ROUND(123.9994, 3), ROUND(123.9995, 3);   
+
+Result : 
+
+----------- -----------  
+123.9990    124.0000                      
+  
+
+FLOOR() --> It will remove fraction.
+
+Syntax :
+FLOOR ( numeric_expression )
+
+Example : 
+
+SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
+
+Result : 
+
+---------      ---------     -----------  
+123            -124          123.0000  
+
+
+
+3. String Function
+-----------------------------------------
+
+The following scalar functions perform an operation on a string input value and return a string or numeric value:
+
+ASCII ---> Returns the ASCII code value of the leftmost character of a character expression.
+
+Syntax : ASCII ( character_expression )
+
+Example : 
+
+SELECT ASCII('A') AS A, ASCII('B') AS B,   
+ASCII('a') AS a, ASCII('b') AS b,  
+ASCII(1) AS [1], ASCII(2) AS [2];
+
+
+Result : 
+
+A           B           a           b           1           2  
+----------- ----------- ----------- ----------- ----------- -----------  
+65          66          97          98          49          50
+
+
+
+CONCAT ---> This function returns a string resulting from the concatenation, 
+	    or joining, of two or more string values in an end-to-end manner. 
+
+
+Syntax : CONCAT ( string_value1, string_value2 [, string_valueN ] )
+
+Example : 
+
+SELECT CONCAT ( 'Happy ', 'Birthday ', 11, '/', '25' ) AS Result;
+
+Result : 
+
+Result  
+-------------------------  
+Happy Birthday 11/25  
+  
+
+Left ---> Returns the left part of a character string with the specified number of characters.
+
+Syntax : LEFT ( character_expression , integer_expression )
+
+Example : 
+
+SELECT LEFT('abcdefg',2);  
+
+Result : 
+
+Result  
+-------------------------  
+ab
+
+
+LEN ---> Returns the number of characters of the specified string expression, excluding trailing spaces.
+
+Syntax : LEN ( string_expression )
+
+Example : 
+
+SELECT LEFT('abcdefg',2);  
+
+Result : 
+
+Result  
+-------------------------  
+ab
+
+
+LOWER ---> Returns a character expression after converting uppercase character data to lowercase.
+
+Syntax : LOWER ( character_expression )
+
+Example : 
+
+SELECT LOWER ('SQL SERVER') as LOWER;  
+
+Result : 
+
+LOWER
+-------------------------  
+sql server
+
+
+LTRIM ---> Returns a character string after truncating all leading spaces from Left Side.
+
+Syntax : LTRIM ( character_expression )
+
+Example : 
+
+SELECT LTRIM('     Five spaces are at the beginning of this string.');  
+
+Result : 
+--------------------------
+Five spaces are at the beginning of this string.
+
+
+
+REPLACE ---> Replaces all occurrences of a specified string value with another string value.
+
+Syntax : REPLACE ( string_expression , string_pattern , string_replacement )
+
+Example : 
+
+SELECT REPLACE('abcdefghicde','cde','xxx');  
+
+Result : 
+
+abxxxfghixxx  
+
+
+REVERSE ---> Returns the reverse order of a string value.
+
+Syntax : REVERSE ( string_expression )
+
+Example : 
+
+SELECT REVERSE('SERVER') as REVERSE;  
+
+Result : 
+
+REVERSE
+-------------------
+REVRES
+
+
+
+Right ---> Returns the right part of a character string with the specified number of characters.
+
+Syntax : RIGHT ( character_expression , integer_expression )
+
+Example : 
+
+SELECT RIGHT('abcdefg',2);  
+
+Result : 
+
+Result  
+-------------------------  
+fg
+
+
+UPPER ---> Returns a character expression after converting lowercase character data to uppercase.
+
+Syntax : UPPER ( character_expression )
+
+Example : 
+
+SELECT UPPER ('sql server') as UPPER;
+
+Result : 
+
+UPPER 
+-------------------------  
+SQL SERVER
+
+
+RTRIM ---> Returns a character string after truncating all leading spaces from Right Side.
+
+Syntax : RTRIM ( character_expression )
+
+Example : 
+
+SELECT RTRIM ('Five spaces are at the ending of this string.      ');  
+
+Result : 
+--------------------------
+Five spaces are at the beginning of this string.
+
+
+
+
+4.DateTime Function
+-----------------------------------------
+GetDate() , sysdatetime() , current_timestamp  ---> Returns the current date and time
+
+DateName() ---> return the date,month and year from given date 
+
+DateDiff() ---> return the difference between the two dates
+
+DateAdd() ---> Returns a new datetime value by adding an interval to the specified datepart of the specified date.
+
+5.Conversion
+----------------------------------------
+These functions support data type casting and conversion:
+
+CAST
+Convert
+

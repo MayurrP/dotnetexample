@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AutoMappingWebApplication19.props" />
+</Project>

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ynDU16QSN0OsDASyECM60QHS7s5uY2L2aJNGqxI3wa7E4P6kQalJSUArdQm++6T4cRqTc2/E4/DCfDC3J8blfw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mayur.pakhale\\source\\repos\\WebApplication20\\WebApplication20\\WebApplication20.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mayur.pakhale\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.18.1\\microsoft.visualstudio.azure.containers.tools.targets.1.18.1.nupkg.sha512"
+  ],
+  "logs": []
+}
